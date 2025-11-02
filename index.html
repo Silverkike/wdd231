@@ -7,27 +7,20 @@
     <meta name="description" content="Home page for WDD 231 course. Student: Enrique Guardado, BYU–Idaho.">
     <meta name="author" content="Enrique Guardado">
     <title>WDD 231 | Home</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/small.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style">
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- CSS (mobile-first, then larger) -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css" media="(min-width:600px)">
-    <!-- Small helper styles needed for the accessible hidden text -->
-    <style>
-        .visually-hidden {
-            position: absolute !important;
-            height: 1px;
-            width: 1px;
-            overflow: hidden;
-            clip: rect(1px, 1px, 1px, 1px);
-            white-space: nowrap;
-            border: 0;
-            padding: 0;
-            margin: -1px;
-        }
-    </style>
+
     <!-- JS in head using defer -->
     <script src="scripts/main.js" defer></script>
 </head>
@@ -37,7 +30,8 @@
         <!-- Header: logo + name + hamburger -->
         <header class="site-header">
             <div class="brand">
-                <img src="images/software-developer-logo.svg" alt="Site Logo" class="site-logo" width="48" height="48">
+                <img src="images/software-developer-logo.svg" alt="Site Logo" class="site-logo" width="48" height="48"
+                    loading="eager">
                 <span class="site-name">Enrique Guardado</span>
             </div>
             <button id="menuBtn" aria-controls="primaryNav" aria-expanded="false" aria-label="Open navigation">
@@ -48,7 +42,7 @@
         <!-- Navigation -->
         <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
             <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
                 <li><a href="#" class="nav-link">Chamber</a></li>
                 <li><a href="#" class="nav-link">Final</a></li>
             </ul>
@@ -81,7 +75,8 @@
                 <aside class="photo card" aria-label="Student photo">
                     <h2 class="card-header">Student Photo</h2>
                     <div class="card-body photo-box">
-                        <img src="images/profile.webp" alt="Student photo" class="student-photo" loading="lazy">
+                        <img src="images/profile.webp" alt="Student photo" class="student-photo" width="180"
+                            height="180" loading="lazy">
                     </div>
                 </aside>
 
@@ -128,18 +123,18 @@
                 <!-- LinkedIn Logo -->
                 <a href="https://www.linkedin.com/in/enrique-guardado-3496a78a/" target="_blank"
                     rel="noopener noreferrer" aria-label="LinkedIn">
-                    <img src="images/linkedin-logo.svg" alt="LinkedIn Profile" width="28" height="28">
+                    <img src="images/linkedin-logo.svg" alt="LinkedIn Profile" width="28" height="28" loading="lazy">
                 </a>
 
                 <!-- GitHub Logo -->
                 <a href="https://github.com/Silverkike/wdd231" target="_blank" rel="noopener noreferrer"
                     aria-label="GitHub">
-                    <img src="images/github-logo.svg" alt="GitHub Repository" width="28" height="28">
+                    <img src="images/github-logo.svg" alt="GitHub Repository" width="28" height="28" loading="lazy">
                 </a>
 
                 <!-- Email Logo -->
                 <a href="mailto:cguardadocruz@byupathway.edu" aria-label="Email">
-                    <img src="images/mail-envelope-logo.svg" alt="Send Email" width="28" height="28">
+                    <img src="images/mail-envelope-logo.svg" alt="Send Email" width="28" height="28" loading="lazy">
                 </a>
             </div>
             <p class="copyright">
