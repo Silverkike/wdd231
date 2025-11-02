@@ -1,15 +1,153 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>WDD231 - Página de prueba</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Home page for WDD 231 course. Student: Enrique Guardado, BYU–Idaho.">
+    <meta name="author" content="Enrique Guardado">
+    <title>WDD 231 | Home</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS (mobile-first, then larger) -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width:600px)">
+    <!-- Small helper styles needed for the accessible hidden text -->
+    <style>
+        .visually-hidden {
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+            border: 0;
+            padding: 0;
+            margin: -1px;
+        }
+    </style>
+    <!-- JS in head using defer -->
+    <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
-    <h1>Hola WDD231 👋</h1>
-    <p>Repositorio de práctica para BYU-Idaho.</p>
-    <p>Ultima actualizacion 29/10/2025</p>
+    <div class="page-wrap">
+        <!-- Header: logo + name + hamburger -->
+        <header class="site-header">
+            <div class="brand">
+                <img src="images/software-developer-logo.svg" alt="Site Logo" class="site-logo" width="48" height="48">
+                <span class="site-name">Enrique Guardado</span>
+            </div>
+            <button id="menuBtn" aria-controls="primaryNav" aria-expanded="false" aria-label="Open navigation">
+                <span id="menuIcon" aria-hidden="true">☰</span>
+            </button>
+        </header>
+
+        <!-- Navigation -->
+        <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Chamber</a></li>
+                <li><a href="#" class="nav-link">Final</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main content -->
+        <main class="main-content" id="maincontent">
+            <h1>Home</h1>
+            <div class="content-grid">
+                <!-- About section -->
+                <section class="about card">
+                    <h2 class="card-header">About Me</h2>
+                    <div class="card-body">
+                        <p>Hello! My name is Enrique. I have worked for more than two decades as an emergency operator
+                            at the 911 Call Center of the PNC, where I've developed strong skills in communication,
+                            coordination, and decision-making under pressure. Throughout my career, I've helped connect
+                            people in critical situations with the right emergency services, ensuring fast and effective
+                            responses.</p>
+                        <p>Currently, I'm pursuing a new professional goal: becoming a software and game developer. I'm
+                            passionate about technology and artificial intelligence, and I'm constantly learning through
+                            online courses and personal projects. My studies in web development and programming have
+                            strengthened my ability to solve problems creatively and to build meaningful digital
+                            experiences.</p>
+                        <p>I believe that learning never stops — every day is an opportunity to improve, innovate, and
+                            create something valuable that can make a difference. 🚀</p>
+                    </div>
+                </section>
+
+                <!-- Photo section -->
+                <aside class="photo card" aria-label="Student photo">
+                    <h2 class="card-header">Student Photo</h2>
+                    <div class="card-body photo-box">
+                        <img src="images/profile.webp" alt="Student photo" class="student-photo" loading="lazy">
+                    </div>
+                </aside>
+
+                <!-- Courses section -->
+                <section class="courses">
+                    <h2>Courses</h2>
+                    <h3 class="courses-header">Web Certificate Courses</h3>
+                    <div class="filters-row" role="toolbar" aria-label="Course filters">
+                        <button class="filter-btn active" id="filterAll" aria-pressed="true">All</button>
+                        <button class="filter-btn" id="filterCSE" aria-pressed="false">CSE</button>
+                        <button class="filter-btn" id="filterWDD" aria-pressed="false">WDD</button>
+                    </div>
+                    <div class="courses-grid" aria-live="polite">
+                        <div class="courses-col" id="colAll">
+                            <div class="col-title">All</div>
+                            <div class="list" id="listAll"></div>
+                        </div>
+                        <div class="courses-col" id="colCSE">
+                            <div class="col-title">CSE</div>
+                            <div class="list" id="listCSE"></div>
+                        </div>
+                        <div class="courses-col" id="colWDD">
+                            <div class="col-title">WDD</div>
+                            <div class="list" id="listWDD"></div>
+                        </div>
+                    </div>
+                    <div class="credits" aria-live="polite">
+                        <p>The total credits for courses listed above is <span id="creditsNumber">0</span></p>
+                    </div>
+                </section>
+
+                <!-- Donut chart section -->
+                <section class="donut-chart" aria-label="Donut chart">
+                    <h2 class="visually-hidden">Donut chart</h2>
+                    <!-- placeholder content: real chart/SVG can go here -->
+                    <div class="donut-placeholder" aria-hidden="true">[Donut chart will appear here]</div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="social">
+                <!-- LinkedIn Logo -->
+                <a href="https://www.linkedin.com/in/enrique-guardado-3496a78a/" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img src="images/linkedin-logo.svg" alt="LinkedIn Profile" width="28" height="28">
+                </a>
+
+                <!-- GitHub Logo -->
+                <a href="https://github.com/Silverkike/wdd231" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <img src="images/github-logo.svg" alt="GitHub Repository" width="28" height="28">
+                </a>
+
+                <!-- Email Logo -->
+                <a href="mailto:cguardadocruz@byupathway.edu" aria-label="Email">
+                    <img src="images/mail-envelope-logo.svg" alt="Send Email" width="28" height="28">
+                </a>
+            </div>
+            <p class="copyright">
+                &copy; <span id="currentyear"></span> Enrique Guardado - San Salvador, El Salvador<br>
+                <span id="lastModified"></span>
+            </p>
+        </footer>
+    </div>
 </body>
 
 </html>

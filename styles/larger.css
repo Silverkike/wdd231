@@ -1,0 +1,95 @@
+@media (min-width:600px) {
+    .page-wrap {
+        padding: 0 20px;
+    }
+
+    /* header becomes horizontal */
+    .site-header {
+        padding: 16px 0;
+    }
+
+    .brand svg {
+        width: 56px;
+        height: 56px;
+    }
+
+    #menuBtn {
+        display: none;
+    }
+
+    /* nav links show horizontally with more spacing */
+    .primary-nav ul {
+        justify-content: flex-start;
+    }
+
+    .primary-nav {
+        margin-bottom: 18px;
+        padding: 10px 12px;
+    }
+
+    /* main layout: about (2fr) + photo (1fr) */
+    .content-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 16px;
+        align-items: start;
+    }
+
+    .about {
+        grid-column: 1;
+    }
+
+    .photo {
+        grid-column: 2;
+    }
+
+    /* Courses section spans full width below */
+    .courses {
+        grid-column: 1 / -1;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 12px;
+    }
+
+    .col-title {
+        text-align: center;
+        background: #111827;
+        color: #fff;
+        padding: 6px;
+        border-radius: 6px;
+        margin-bottom: 6px;
+    }
+
+    .list {
+        min-height: 60px;
+    }
+
+    /* course items display as small bars like in screenshot */
+    .course-item {
+        padding: 8px;
+        border-radius: 6px;
+        background: #f3f4f6;
+        border: 1px solid #cfcfcf;
+    }
+
+    /* Increase photo box height to create the square look on desktop */
+    .photo .photo-box {
+        height: 260px;
+    }
+
+    .about .card-body {
+        min-height: 260px;
+    }
+
+    /* center credits text and smaller font */
+    .credits {
+        font-size: 0.95rem;
+    }
+
+    /* footer */
+    .site-footer {
+        padding: 16px 12px;
+    }
+}
