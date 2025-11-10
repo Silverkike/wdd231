@@ -1,4 +1,4 @@
-// js/script.js
+// scripts/script.js
 const membersContainer = document.getElementById('members-container');
 const gridBtn = document.getElementById('grid-btn');
 const listBtn = document.getElementById('list-btn');
@@ -8,7 +8,7 @@ let currentView = 'grid'; // grid | list
 
 async function loadMembers() {
     try {
-        const resp = await fetch('data/members.json');
+        const resp = await fetch('data/members.json', { cache: "no-store" });
         if (!resp.ok) throw new Error('Error cargando members.json');
         membersData = await resp.json();
         renderMembers();
@@ -67,14 +67,14 @@ function renderMembers() {
     }
 }
 
-gridBtn.addEventListener('click', () => {
+gridBtn && gridBtn.addEventListener('click', () => {
     currentView = 'grid';
     gridBtn.setAttribute('aria-pressed', 'true');
     listBtn.setAttribute('aria-pressed', 'false');
     renderMembers();
 });
 
-listBtn.addEventListener('click', () => {
+listBtn && listBtn.addEventListener('click', () => {
     currentView = 'list';
     gridBtn.setAttribute('aria-pressed', 'false');
     listBtn.setAttribute('aria-pressed', 'true');
@@ -89,7 +89,7 @@ function setFooterDates() {
     copyrightEl.textContent = `© ${year} Alianza Empresarial San Salvador`;
 
     const last = new Date(document.lastModified);
-    lastEl.textContent = `Última modificación: ${last.toLocaleString()}`;
+    lastEl.textContent = `Última modificación: ${last.toLocaleString('es-ES')}`;
 }
 
 function escapeHtml(unsafe) {
@@ -102,19 +102,39 @@ document.addEventListener('DOMContentLoaded', () => {
     loadMembers();
     setFooterDates();
 
-    // improved nav toggle for mobile: toggle .open on .main-nav
+    // nav toggle - use class .open so CSS handles layout (no inline styles)
     const navToggle = document.getElementById('nav-toggle');
     const mainNav = document.getElementById('main-nav');
+
     if (navToggle && mainNav) {
         navToggle.addEventListener('click', () => {
             const expanded = navToggle.getAttribute('aria-expanded') === 'true';
             navToggle.setAttribute('aria-expanded', String(!expanded));
             mainNav.classList.toggle('open');
-            // when opening, focus first link for accessibility
-            if (!expanded) {
-                const firstLink = mainNav.querySelector('.nav-list a');
-                firstLink && firstLink.focus();
+        });
+
+        // Close menu on click outside or resize to avoid stuck state
+        document.addEventListener('click', (e) => {
+            if (!mainNav.contains(e.target) && mainNav.classList.contains('open')) {
+                mainNav.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 640 && mainNav.classList.contains('open')) {
+                mainNav.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
             }
         });
     }
+
+    // keyboard accessibility: close nav with Esc
+    document.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Escape' && mainNav && mainNav.classList.contains('open')) {
+            mainNav.classList.remove('open');
+            navToggle && navToggle.setAttribute('aria-expanded', 'false');
+            navToggle && navToggle.focus();
+        }
+    });
 });

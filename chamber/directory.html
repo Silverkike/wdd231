@@ -22,52 +22,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- normalize (link before your styles) -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- meta for better mobile and SEO -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
     <header class="site-header">
         <div class="container header-inner">
             <a class="logo" href="index.html" aria-label="Inicio - Alianza Empresarial San Salvador">
-                <img src="images/logo.webp" alt="Alianza Empresarial San Salvador logo">
+                <!-- ✅ height="auto" eliminado -->
+                <img src="images/logo.webp" alt="Alianza Empresarial San Salvador logo" width="160">
                 <span class="site-title">Alianza Empresarial San Salvador</span>
             </a>
 
             <nav id="main-nav" class="main-nav" aria-label="Main navigation">
                 <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list"
                     aria-label="Abrir menú">☰</button>
-                <ul id="nav-list" class="nav-list" role="menubar">
-                    <li role="none"><a role="menuitem" href="index.html">Home</a></li>
-                    <li role="none"><a role="menuitem" href="discover.html">Discover</a></li>
-                    <li role="none"><a role="menuitem" href="directory.html" class="active">Directory</a></li>
-                    <li role="none"><a role="menuitem" href="join.html">Join</a></li>
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <h1>Directorio — Alianza Empresarial San Salvador</h1>
 
-        <!-- View controls moved here (arriba de las tarjetas) -->
-        <div class="controls-row">
-            <div class="view-controls" role="toolbar" aria-label="Controles de vista">
+        <!-- View controls -->
+        <div class="controls-row" aria-hidden="false">
+            <!-- ✅ aria-label con role="group" -->
+            <div class="view-controls" role="group" aria-label="Controles de vista">
                 <button id="grid-btn" aria-pressed="true" title="Grid view">🔳 Grid</button>
                 <button id="list-btn" aria-pressed="false" title="List view">📋 List</button>
             </div>
         </div>
 
-        <section id="members-container" class="members grid-view" aria-live="polite">
-            <!-- Heading for accessibility (visually hidden) -->
-            <h2 class="sr-only">Lista de miembros y negocios</h2>
-
+        <section id="members-container" class="members grid-view" aria-live="polite"
+            aria-label="Directorio de miembros">
             <!-- JS inyecta aquí las tarjetas o la lista -->
         </section>
     </main>
 
+    <!-- ✅ role="contentinfo" eliminado -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <address class="footer-address">
@@ -78,16 +77,15 @@
                 (503) 2221-5678
             </address>
 
-            <!-- social links centered between address and right block -->
             <div class="footer-social" aria-hidden="true">
                 <a href="#" aria-label="YouTube">
-                    <img src="images/yt.svg" alt="YouTube logo">
+                    <img src="images/youtube.svg" alt="YouTube logo" width="36" height="36" loading="lazy">
                 </a>
                 <a href="#" aria-label="X (Twitter)">
-                    <img src="images/tweeter.svg" alt="Twitter logo">
+                    <img src="images/tweeter.svg" alt="Twitter logo" width="36" height="36" loading="lazy">
                 </a>
                 <a href="#" aria-label="LinkedIn">
-                    <img src="images/linkedin.svg" alt="LinkedIn logo">
+                    <img src="images/linkedin.svg" alt="LinkedIn logo" width="36" height="36" loading="lazy">
                 </a>
             </div>
 
@@ -99,7 +97,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </body>
 
 </html>

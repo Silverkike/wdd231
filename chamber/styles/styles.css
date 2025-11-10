@@ -8,33 +8,16 @@
     --accent: #d4af37;
     /* warm gold */
     --bg: #f7f9fc;
-    /* very light background */
     --card-bg: #ffffff;
-    /* card background */
     --text: #1f2937;
-    /* near-black text */
     --muted: #252931;
-    /* muted text */
     --shadow: 0 10px 20px rgba(11, 61, 145, 0.08);
     --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
     /* sizes */
     --radius: 10px;
-    --logo-size: 120px;
+    --logo-size: 100px;
     /* Ajusta aquí el tamaño del logo */
-}
-
-/* Utility: visually-hidden (sr-only) */
-.sr-only {
-    position: absolute !important;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-    border: 0;
 }
 
 /* Base reset helpers */
@@ -93,7 +76,6 @@ body {
 
 .logo img {
     height: var(--logo-size);
-    /* tamaño ajustable desde :root */
     display: block;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
     width: auto;
@@ -151,7 +133,7 @@ body {
     margin-bottom: 0.25rem;
 }
 
-.view-controls[role="toolbar"] button {
+.view-controls button {
     margin-left: 0.5rem;
     padding: 0.45rem 0.7rem;
     border-radius: 8px;
@@ -174,6 +156,7 @@ main h1 {
     display: grid;
     gap: 1rem;
     margin-top: 0.5rem;
+    align-items: start;
 }
 
 .grid-view {
@@ -202,6 +185,7 @@ main h1 {
     box-shadow: 0 18px 40px rgba(11, 61, 145, 0.10);
 }
 
+/* image in card */
 .member-card img {
     width: 80px;
     height: 80px;
@@ -235,7 +219,6 @@ main h1 {
     margin-left: 0.35rem;
 }
 
-/* levels */
 .membership-1 {
     background: #e6eef5;
     color: #274060;
@@ -272,9 +255,10 @@ main h1 {
     border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* ensure footer links (including email) are white */
+/* ensure footer links white */
 .site-footer a {
     color: #fff;
+    text-decoration: underline;
 }
 
 /* footer grid: 3 columns (address | social | right) */
@@ -297,17 +281,17 @@ main h1 {
 }
 
 .footer-social a img {
-    width: 42px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
     display: block;
     filter: brightness(0) invert(1);
-    /* make icons white */
+    /* force white icons */
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .footer-social a:hover img {
-    transform: scale(1.12);
-    opacity: 0.9;
+    transform: scale(1.15);
+    opacity: 0.85;
 }
 
 /* footer right */
