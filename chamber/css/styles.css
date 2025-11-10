@@ -1,0 +1,387 @@
+:root {
+    /* Corporate palette + typography */
+    --primary: #0b3d91;
+    /* deep navy */
+    --primary-700: #082f71;
+    --secondary: #17807a;
+    /* teal accent */
+    --accent: #d4af37;
+    /* warm gold */
+    --bg: #f7f9fc;
+    /* very light background */
+    --card-bg: #ffffff;
+    /* card background */
+    --text: #1f2937;
+    /* near-black text */
+    --muted: #252931;
+    /* muted text */
+    --shadow: 0 10px 20px rgba(11, 61, 145, 0.08);
+    --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* sizes */
+    --radius: 10px;
+    --logo-size: 120px;
+    /* Ajusta aquí el tamaño del logo */
+}
+
+/* Utility: visually-hidden (sr-only) */
+.sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Base reset helpers */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font);
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* layout container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* header */
+.site-header {
+    background: linear-gradient(180deg, var(--primary), var(--primary-700));
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo img {
+    height: var(--logo-size);
+    /* tamaño ajustable desde :root */
+    display: block;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+    width: auto;
+}
+
+.site-title {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+}
+
+/* NAV */
+.main-nav {
+    position: relative;
+}
+
+/* nav toggle (hamburger) hidden on desktop, visible on small screens */
+#nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-list a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.nav-list a.active,
+.nav-list a:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* View controls (moved above cards) */
+.controls-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.view-controls[role="toolbar"] button {
+    margin-left: 0.5rem;
+    padding: 0.45rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, 0.98);
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+}
+
+/* page heading */
+main h1 {
+    margin-top: 1.25rem;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+/* MEMBERS GRID */
+.members {
+    display: grid;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.grid-view {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.list-view {
+    grid-template-columns: 1fr;
+}
+
+/* card */
+.member-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    border: 1px solid rgba(31, 41, 55, 0.06);
+    box-shadow: var(--shadow);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(11, 61, 145, 0.10);
+}
+
+.member-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.04));
+}
+
+/* info */
+.member-info h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.05rem;
+    color: var(--text);
+}
+
+.meta {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin: 0.15rem 0;
+}
+
+/* membership badge */
+.membership-badge {
+    display: inline-block;
+    padding: 0.18rem 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border-radius: 999px;
+    letter-spacing: 0.2px;
+    margin-left: 0.35rem;
+}
+
+/* levels */
+.membership-1 {
+    background: #e6eef5;
+    color: #274060;
+    border: 1px solid rgba(39, 64, 96, 0.06);
+}
+
+.membership-2 {
+    background: #f0f4f6;
+    color: #3b5566;
+    border: 1px solid rgba(59, 85, 102, 0.06);
+}
+
+.membership-3 {
+    background: linear-gradient(90deg, #ffd97a, #d4af37);
+    color: #1f1f1f;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* list-specific styling */
+.member-card.list {
+    align-items: center;
+}
+
+.member-card.list img {
+    display: none;
+}
+
+/* footer */
+.site-footer {
+    background: linear-gradient(180deg, var(--primary-700), var(--primary));
+    color: #fff;
+    padding: 1.25rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ensure footer links (including email) are white */
+.site-footer a {
+    color: #fff;
+}
+
+/* footer grid: 3 columns (address | social | right) */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* place social icons centered */
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social a img {
+    width: 42px;
+    height: 42px;
+    display: block;
+    filter: brightness(0) invert(1);
+    /* make icons white */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.12);
+    opacity: 0.9;
+}
+
+/* footer right */
+.footer-right {
+    text-align: right;
+}
+
+/* small screens */
+@media (max-width: 1000px) {
+    .grid-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .grid-view {
+        grid-template-columns: 1fr;
+    }
+
+    /* show hamburger */
+    #nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* default hide nav-list on mobile; will open when nav has .open */
+    .nav-list {
+        display: none;
+    }
+
+    /* mobile open state: full-width panel under header */
+    .main-nav.open .nav-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: linear-gradient(180deg, var(--primary), var(--primary-700));
+        padding: 1rem;
+        gap: 0.6rem;
+        z-index: 45;
+        max-height: calc(100vh - 60px);
+        overflow: auto;
+    }
+
+    .main-nav.open .nav-list a {
+        padding: 0.6rem 0.8rem;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    /* controls row: place buttons full-width and left-aligned on small screens */
+    .controls-row {
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+    }
+
+    /* footer layout stack */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+}
+
+/* accessibility focus */
+a:focus,
+button:focus {
+    outline: 3px solid rgba(23, 128, 122, 0.18);
+    outline-offset: 2px;
+}

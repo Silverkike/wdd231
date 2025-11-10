@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Café Central",
+        "address": "Calle Principal 1",
+        "phone": "(503) 2218-2221",
+        "website": "https://cafecentral.example",
+        "image": "images/cafe-central.webp",
+        "membership": 3,
+        "tagline": "Cafés y repostería"
+    },
+    {
+        "name": "Papel y Arte",
+        "address": "Av. Cultura 45",
+        "phone": "(503) 2478-5476",
+        "website": "https://papelyarte.example",
+        "image": "images/papel-arte.webp",
+        "membership": 2,
+        "tagline": "Suministros artísticos"
+    },
+    {
+        "name": "Ferretería La Rápida",
+        "address": "Calle Obrera 120",
+        "phone": "(503) 2344-2648",
+        "website": "https://ferreteria.example",
+        "image": "images/ferr-rap.webp",
+        "membership": 1,
+        "tagline": "Todo para la construcción"
+    },
+    {
+        "name": "Floristería Sol",
+        "address": "Plaza Verde 3",
+        "phone": "(503) 2684-3647",
+        "website": "https://floristeria.example",
+        "image": "images/flor-sol.webp",
+        "membership": 2,
+        "tagline": "Flores para toda ocasión"
+    },
+    {
+        "name": "Taller Mecánico Pérez",
+        "address": "Ruta 5 km 7",
+        "phone": "(503) 2588-3298",
+        "website": "https://tallerperez.example",
+        "image": "images/tall-per.webp",
+        "membership": 3,
+        "tagline": "Servicios automotrices"
+    },
+    {
+        "name": "Librería Estudio",
+        "address": "Calle Libro 7",
+        "phone": "(503) 2352-5665",
+        "website": "https://libreria.example",
+        "image": "images/lib-est.webp",
+        "membership": 1,
+        "tagline": "Libros y material escolar"
+    },
+    {
+        "name": "Estética Bella",
+        "address": "Boulevard 22",
+        "phone": "(503) 2777-6835",
+        "website": "https://esteticabella.example",
+        "image": "images/est-bell.webp",
+        "membership": 2,
+        "tagline": "Belleza y bienestar"
+    }
+]

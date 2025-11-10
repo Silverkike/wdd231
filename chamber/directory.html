@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Directorio - Alianza Empresarial San Salvador</title>
+    <meta name="description" content="Directorio de negocios locales - Alianza Empresarial San Salvador">
+    <meta name="author" content="Enrique Guardado">
+
+    <!-- Open Graph (Facebook) -->
+    <meta property="og:title" content="Directorio - Alianza Empresarial San Salvador">
+    <meta property="og:description" content="Encuentra negocios locales y servicios en San Salvador.">
+    <meta property="og:image" content="https://username.github.io/wdd231/chamber/images/og-image.png">
+    <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- normalize (link before your styles) -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- meta for better mobile and SEO -->
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Inicio - Alianza Empresarial San Salvador">
+                <img src="images/logo.webp" alt="Alianza Empresarial San Salvador logo">
+                <span class="site-title">Alianza Empresarial San Salvador</span>
+            </a>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list"
+                    aria-label="Abrir menú">☰</button>
+                <ul id="nav-list" class="nav-list" role="menubar">
+                    <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+                    <li role="none"><a role="menuitem" href="discover.html">Discover</a></li>
+                    <li role="none"><a role="menuitem" href="directory.html" class="active">Directory</a></li>
+                    <li role="none"><a role="menuitem" href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Directorio — Alianza Empresarial San Salvador</h1>
+
+        <!-- View controls moved here (arriba de las tarjetas) -->
+        <div class="controls-row">
+            <div class="view-controls" role="toolbar" aria-label="Controles de vista">
+                <button id="grid-btn" aria-pressed="true" title="Grid view">🔳 Grid</button>
+                <button id="list-btn" aria-pressed="false" title="List view">📋 List</button>
+            </div>
+        </div>
+
+        <section id="members-container" class="members grid-view" aria-live="polite">
+            <!-- Heading for accessibility (visually hidden) -->
+            <h2 class="sr-only">Lista de miembros y negocios</h2>
+
+            <!-- JS inyecta aquí las tarjetas o la lista -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <address class="footer-address">
+                Alianza Empresarial San Salvador<br>
+                Paseo Gral. Escalón 911<br>
+                San Salvador, El Salvador.<br>
+                <a href="mailto:info@alianza-eesv.example">info@alianza-eesv.example</a><br>
+                (503) 2221-5678
+            </address>
+
+            <!-- social links centered between address and right block -->
+            <div class="footer-social" aria-hidden="true">
+                <a href="#" aria-label="YouTube">
+                    <img src="images/yt.svg" alt="YouTube logo">
+                </a>
+                <a href="#" aria-label="X (Twitter)">
+                    <img src="images/tweeter.svg" alt="Twitter logo">
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn logo">
+                </a>
+            </div>
+
+            <div class="footer-right">
+                <p>WDD231 Class Project — Enrique Guardado</p>
+                <p id="copyright"></p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
