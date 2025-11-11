@@ -12,13 +12,15 @@
     <meta property="og:title" content="Directorio - Alianza Empresarial San Salvador">
     <meta property="og:description" content="Encuentra negocios locales y servicios en San Salvador.">
     <meta property="og:image" content="https://silverkike.github.io/wdd231/chamber/images/og-image.webp">
-    <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://silverkike.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
     <!-- favicon -->
     <link rel="icon" href="favicon.ico">
 
-    <!-- Google Font -->
+    <!-- ✅ Google Fonts preconnect links añadidos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- normalize (link before your styles) -->
@@ -30,7 +32,6 @@
     <header class="site-header">
         <div class="container header-inner">
             <a class="logo" href="index.html" aria-label="Inicio - Alianza Empresarial San Salvador">
-                <!-- ✅ height="auto" eliminado -->
                 <img src="images/logo.webp" alt="Alianza Empresarial San Salvador logo" width="160">
                 <span class="site-title">Alianza Empresarial San Salvador</span>
             </a>
@@ -51,9 +52,7 @@
     <main class="container" id="main-content">
         <h1>Directorio — Alianza Empresarial San Salvador</h1>
 
-        <!-- View controls -->
         <div class="controls-row" aria-hidden="false">
-            <!-- ✅ aria-label con role="group" -->
             <div class="view-controls" role="group" aria-label="Controles de vista">
                 <button id="grid-btn" aria-pressed="true" title="Grid view">🔳 Grid</button>
                 <button id="list-btn" aria-pressed="false" title="List view">📋 List</button>
@@ -62,11 +61,9 @@
 
         <section id="members-container" class="members grid-view" aria-live="polite"
             aria-label="Directorio de miembros">
-            <!-- JS inyecta aquí las tarjetas o la lista -->
         </section>
     </main>
 
-    <!-- ✅ role="contentinfo" eliminado -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <address class="footer-address">
