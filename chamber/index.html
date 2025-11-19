@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Chamber of Commerce | Home</title>
+    <meta name="description" content="Directorio de negocios locales - Alianza Empresarial San Salvador">
+    <meta name="author" content="Enrique Guardado">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Directorio - Alianza Empresarial San Salvador">
+    <meta property="og:description" content="Encuentra negocios locales y servicios en San Salvador.">
+    <meta property="og:image" content="https://silverkike.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://silverkike.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Inicio - Alianza Empresarial San Salvador">
+                <img src="images/logo.webp" alt="Alianza Empresarial San Salvador logo" width="160" height="160">
+                <span class="site-title">Alianza Empresarial San Salvador</span>
+            </a>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menú">
+                    ☰
+                </button>
+
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main-content">
+
+        <!-- HERO -->
+        <section class="hero">
+            <h2 class="visually-hidden">Welcome to Alianza Empresarial San Salvador</h2>
+            <picture>
+                <source media="(min-width: 600px)" srcset="images/hero-large.jpg">
+                <img src="images/hero-small.jpg" alt="Vista panorámica de la ciudad representando a la comunidad local"
+                    loading="lazy">
+            </picture>
+
+            <div class="cta">
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- CONTENT WRAPPER -->
+        <div class="container home-grid">
+
+            <!-- EVENTS SECTION -->
+            <section id="events" class="events-section">
+                <h2>Upcoming Events</h2>
+                <p>Content coming soon...</p>
+            </section>
+
+            <!-- WEATHER SECTION -->
+            <section id="weather" class="weather-section" aria-labelledby="weather-heading">
+                <h2 id="weather-heading">Current Weather</h2>
+
+                <div class="weather-card" aria-live="polite">
+                    <div class="weather-current">
+                        <div class="weather-main">
+                            <img id="weather-icon" class="weather-icon" src="images/weather-placeholder.png"
+                                alt="Icono del clima" width="64" height="64" loading="lazy" style="display:none;">
+                            <div>
+                                <div id="weather-temp" class="weather-temp">--°C</div>
+                                <div id="weather-desc" class="weather-desc">Cargando...</div>
+                            </div>
+                        </div>
+                        <div id="weather-location" class="weather-location">San Salvador</div>
+                    </div>
+
+                    <div id="weather-forecast" class="weather-forecast"></div>
+
+                    <div id="weather-chill" class="weather-chill"
+                        style="margin-top:8px; font-size:0.9rem; color:var(--muted);">
+                    </div>
+                </div>
+            </section>
+
+            <!-- SPOTLIGHTS SECTION -->
+            <section id="spotlights" class="spotlights-section">
+                <h2>Member Spotlights</h2>
+                <div id="spotlights-container" class="spotlights-container"></div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+
+            <address class="footer-address">
+                Alianza Empresarial San Salvador<br>
+                Paseo Gral. Escalón 911<br>
+                San Salvador, El Salvador.<br>
+                <a href="mailto:info@alianza-eesv.example">info@alianza-eesv.example</a><br>
+                (503) 2221-5678
+            </address>
+
+            <div class="footer-social" aria-hidden="true">
+                <a href="#" aria-label="YouTube">
+                    <img src="images/youtube.svg" alt="YouTube logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="X (Twitter)">
+                    <img src="images/tweeter.svg" alt="Twitter logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn logo" width="36" height="36">
+                </a>
+            </div>
+
+            <div class="footer-right">
+                <p>WDD231 Class Project — Enrique Guardado</p>
+                <p id="copyright"></p>
+                <p id="last-modified"></p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="scripts/script.js" defer></script>
+</body>
+
+</html>
