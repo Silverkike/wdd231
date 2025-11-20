@@ -88,8 +88,8 @@
                 <div class="weather-card" aria-live="polite">
                     <div class="weather-current">
                         <div class="weather-main">
-                            <img id="weather-icon" class="weather-icon" src="images/weather-placeholder.png"
-                                alt="Icono del clima" width="64" height="64" loading="lazy" style="display:none;">
+                            <img id="weather-icon" class="weather-icon hidden" src="images/weather-placeholder.png"
+                                alt="Icono del clima" width="64" height="64" loading="lazy">
                             <div>
                                 <div id="weather-temp" class="weather-temp">--°C</div>
                                 <div id="weather-desc" class="weather-desc">Cargando...</div>
@@ -100,9 +100,7 @@
 
                     <div id="weather-forecast" class="weather-forecast"></div>
 
-                    <div id="weather-chill" class="weather-chill"
-                        style="margin-top:8px; font-size:0.9rem; color:var(--muted);">
-                    </div>
+                    <div id="weather-chill" class="weather-chill weather-chill-styles"></div>
                 </div>
             </section>
 

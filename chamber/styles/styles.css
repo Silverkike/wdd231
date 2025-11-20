@@ -623,3 +623,15 @@ button:focus {
     white-space: nowrap;
     border: 0;
 }
+
+/* He agregado estas reglas a mi archivo styles.css */
+
+.hidden {
+    display: none;
+}
+
+.weather-chill-styles {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
