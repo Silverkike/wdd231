@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---------- Responsive nav (icon toggle) ----------
     const menuBtn = document.getElementById('menuBtn');
-    const menuIcon = document.getElementById('menuIcon'); // span inside button
+    const menuIcon = document.getElementById('menuIcon');
     const primaryNav = document.getElementById('primaryNav');
 
     if (menuBtn && primaryNav) {
@@ -17,18 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
             const ul = primaryNav.querySelector('ul');
 
-            // Toggle aria-expanded
             menuBtn.setAttribute('aria-expanded', String(!expanded));
-
-            // Toggle the icon: hamburger -> X
             if (menuIcon) {
                 menuIcon.textContent = expanded ? '☰' : '✕';
             }
-
-            // Update aria-label for screen readers
             menuBtn.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
 
-            // Toggle the visual display of the menu (fallback)
             if (ul) {
                 if (expanded) {
                     ul.style.display = 'none';
@@ -39,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Ensure menu is hidden on page load for small screens and icon is correct
         const initialUl = primaryNav.querySelector('ul');
         if (initialUl) {
             if (window.getComputedStyle(initialUl).display !== 'flex') {
@@ -60,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lastModSpan = document.getElementById('lastModified');
     if (lastModSpan) lastModSpan.textContent = 'Last Modified: ' + document.lastModified;
 
-    // ---------- Courses array (copied exactly with completed flags adjusted) ----------
+    // ---------- Courses array ----------
     const courses = [
         {
             subject: 'CSE',
@@ -68,9 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Introduction to Programming',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
+            description: 'This course will introduce students to programming...',
             technology: ['Python'],
-            completed: true   // marked true
+            completed: true
         },
         {
             subject: 'WDD',
@@ -78,9 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Web Fundamentals',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
+            description: 'This course introduces students to the World Wide Web...',
             technology: ['HTML', 'CSS'],
-            completed: true   // marked true
+            completed: true
         },
         {
             subject: 'CSE',
@@ -88,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Programming with Functions',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
+            description: 'CSE 111 students become more organized...',
             technology: ['Python'],
             completed: false
         },
@@ -98,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Programming with Classes',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
+            description: 'This course will introduce the notion of classes...',
             technology: ['C#'],
             completed: false
         },
@@ -108,9 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Dynamic Web Fundamentals',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
+            description: 'This course builds on prior experience...',
             technology: ['HTML', 'CSS', 'JavaScript'],
-            completed: true   // marked true
+            completed: true
         },
         {
             subject: 'WDD',
@@ -118,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Frontend Web Development I',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
+            description: 'This course builds on prior experience...',
             technology: ['HTML', 'CSS', 'JavaScript'],
             completed: false
         }
@@ -138,19 +131,63 @@ document.addEventListener('DOMContentLoaded', () => {
     const colCSE = document.getElementById('colCSE');
     const colWDD = document.getElementById('colWDD');
 
+    // ---------- Modal reference ----------
+    const courseDetails = document.getElementById("course-details");
+
     // ---------- Helper functions ----------
     function escapeHtml(str) {
         return String(str).replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
     }
 
+    // CREATE THE COURSE ITEM + MODAL CLICK EVENT
     function createCourseItem(course) {
         const div = document.createElement('div');
         div.className = 'course-item' + (course.completed ? ' completed' : '');
         const code = `${course.subject} ${course.number}`;
         div.innerHTML = `<strong>${code}</strong> — ${escapeHtml(course.title)} <span class="meta">(${course.credits} cr)</span>`;
+
+        // 🔥 Add modal trigger here
+        div.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
+
         return div;
     }
 
+    // ---------- Modal function ----------
+    function displayCourseDetails(course) {
+        courseDetails.innerHTML = `
+            <button id="closeModal">❌</button>
+            <h2>${course.subject} ${course.number}</h2>
+            <h3>${course.title}</h3>
+            <p><strong>Credits:</strong> ${course.credits}</p>
+            <p><strong>Certificate:</strong> ${course.certificate}</p>
+            <p>${course.description}</p>
+            <p><strong>Technologies:</strong> ${course.technology.join(", ")}</p>
+        `;
+
+        courseDetails.showModal();
+
+        const closeBtn = document.getElementById("closeModal");
+        closeBtn.addEventListener("click", () => {
+            courseDetails.close();
+        });
+
+        // close if clicking outside dialog
+        courseDetails.addEventListener("click", (event) => {
+            const rect = courseDetails.getBoundingClientRect();
+            if (
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom
+            ) {
+                courseDetails.close();
+            }
+        });
+    }
+
+    // ---------- Render columns ----------
     function renderAllColumns() {
         if (listAll) {
             listAll.innerHTML = '';
@@ -166,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ---------- Credits calculation using reduce ----------
+    // ---------- Credits ----------
     function calcCreditsFor(filter) {
         let filtered = courses.slice();
         if (filter === 'CSE') filtered = filtered.filter(c => c.subject === 'CSE');
@@ -184,7 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---------- Filter behavior ----------
     function setActiveFilter(filter) {
-        // show/hide columns depending on filter
         if (colAll) colAll.classList.remove('hidden');
         if (colCSE) colCSE.classList.remove('hidden');
         if (colWDD) colWDD.classList.remove('hidden');
@@ -200,7 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (colCSE) colCSE.classList.add('hidden');
         }
 
-        // aria-pressed and visual active class
         if (btnAll) btnAll.setAttribute('aria-pressed', filter === 'ALL' ? 'true' : 'false');
         if (btnCSE) btnCSE.setAttribute('aria-pressed', filter === 'CSE' ? 'true' : 'false');
         if (btnWDD) btnWDD.setAttribute('aria-pressed', filter === 'WDD' ? 'true' : 'false');
@@ -210,7 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (filter === 'CSE' && btnCSE) btnCSE.classList.add('active');
         if (filter === 'WDD' && btnWDD) btnWDD.classList.add('active');
 
-        // update credits for shown filter
         updateCreditsDisplay(filter === 'ALL' ? 'all' : filter);
     }
 
@@ -218,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderAllColumns();
     setActiveFilter('ALL');
 
-    // ---------- Attach events ----------
+    // ---------- Filter events ----------
     if (btnAll) btnAll.addEventListener('click', () => setActiveFilter('ALL'));
     if (btnCSE) btnCSE.addEventListener('click', () => setActiveFilter('CSE'));
     if (btnWDD) btnWDD.addEventListener('click', () => setActiveFilter('WDD'));
