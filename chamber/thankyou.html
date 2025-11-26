@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Thank You — Membership Application</title>
+    <meta name="description" content="Thank you page for the Chamber membership form">
+    <meta name="author" content="Enrique Guardado">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Thank You">
+    <meta property="og:description" content="Your membership application has been received.">
+    <meta property="og:image" content="https://silverkike.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://silverkike.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER (copied exactly from index.html) -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Inicio - Alianza Empresarial San Salvador">
+                <img src="images/logo.webp" alt="Alianza Empresarial San Salvador logo" width="160" height="160">
+                <span class="site-title">Alianza Empresarial San Salvador</span>
+            </a>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list"
+                    aria-label="Abrir menú">☰</button>
+
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container thankyou-main">
+        <h1>Thank You for Your Application!</h1>
+        <p>We have received your membership request. Below is a summary of the information you submitted:</p>
+
+        <section class="submitted-info">
+            <h2>Submitted Information</h2>
+
+            <ul class="info-list">
+                <li><strong>First Name:</strong> <span id="out-firstName"></span></li>
+                <li><strong>Last Name:</strong> <span id="out-lastName"></span></li>
+                <li><strong>Email:</strong> <span id="out-email"></span></li>
+                <li><strong>Mobile Phone:</strong> <span id="out-phone"></span></li>
+                <li><strong>Business / Organization:</strong> <span id="out-organization"></span></li>
+                <li><strong>Submission Date:</strong> <span id="out-timestamp"></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- FOOTER (copied exactly from index.html) -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+
+            <address class="footer-address">
+                Alianza Empresarial San Salvador<br>
+                Paseo Gral. Escalón 911<br>
+                San Salvador, El Salvador.<br>
+                <a href="mailto:info@alianza-eesv.example">info@alianza-eesv.example</a><br>
+                (503) 2221-5678
+            </address>
+
+            <div class="footer-social" aria-hidden="true">
+                <a href="#" aria-label="YouTube">
+                    <img src="images/youtube.svg" alt="YouTube logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="X (Twitter)">
+                    <img src="images/tweeter.svg" alt="Twitter logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn logo" width="36" height="36">
+                </a>
+            </div>
+
+            <div class="footer-right">
+                <p>WDD231 Class Project — Enrique Guardado</p>
+                <p id="copyright"></p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script to read URL parameters and display them -->
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById("out-firstName").textContent = params.get("firstName") || "—";
+        document.getElementById("out-lastName").textContent = params.get("lastName") || "—";
+        document.getElementById("out-email").textContent = params.get("email") || "—";
+        document.getElementById("out-phone").textContent = params.get("phone") || "—";
+        document.getElementById("out-organization").textContent = params.get("organization") || "—";
+        document.getElementById("out-timestamp").textContent = params.get("timestamp") || "—";
+    </script>
+
+    <!-- main script (your global site js) -->
+    <script src="./scripts/script.js" defer></script>
+
+</body>
+
+</html>

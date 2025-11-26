@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Join the Chamber</title>
+    <meta name="description" content="Únete a la Alianza Empresarial San Salvador. Formulario de membresía.">
+    <meta name="author" content="Enrique Guardado">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Únete a la Cámara de Comercio">
+    <meta property="og:description"
+        content="Formulario para solicitar membresía en la Alianza Empresarial San Salvador.">
+    <meta property="og:image" content="https://silverkike.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://silverkike.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Inicio - Alianza Empresarial San Salvador">
+                <img src="images/logo.webp" alt="Alianza Empresarial San Salvador logo" width="160" height="160">
+                <span class="site-title">Alianza Empresarial San Salvador</span>
+            </a>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menú">
+                    ☰
+                </button>
+
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main-content" class="join-main container">
+
+        <h1>Membership Application</h1>
+
+        <!-- join-layout: form left (or top on mobile) + cards right (or below on mobile) -->
+        <div class="join-layout">
+
+            <!-- FORM -->
+            <section id="membership-form-section" class="join-form-section" aria-labelledby="join-heading">
+                <h2 id="join-heading" class="visually-hidden">Membership Application Form</h2>
+
+                <form id="membership-form" method="get" action="thankyou.html" novalidate>
+                    <ul class="form-fields">
+
+                        <li>
+                            <label>
+                                First Name *
+                                <input id="firstName" type="text" name="firstName" required autocomplete="given-name"
+                                    title="Enter your first name">
+                            </label>
+                        </li>
+
+                        <li>
+                            <label>
+                                Last Name *
+                                <input id="lastName" type="text" name="lastName" required autocomplete="family-name"
+                                    title="Enter your last name">
+                            </label>
+                        </li>
+
+                        <li>
+                            <label>
+                                Organizational Title *
+                                <input id="title" type="text" name="title" required autocomplete="organization-title"
+                                    pattern="[A-Za-z\s\-]{7,}"
+                                    title="Only letters, spaces, and hyphens. Minimum 7 characters.">
+                            </label>
+                        </li>
+
+                        <li>
+                            <label>
+                                Email Address *
+                                <input id="email" type="email" name="email" required autocomplete="email"
+                                    placeholder="name@example.com" title="Enter a valid email address">
+                            </label>
+                        </li>
+
+                        <li>
+                            <label>
+                                Mobile Phone *
+                                <input id="phone" type="tel" name="phone" required autocomplete="tel"
+                                    title="Enter your mobile number">
+                            </label>
+                        </li>
+
+                        <li>
+                            <label>
+                                Business / Organization Name *
+                                <input id="organization" type="text" name="organization" required
+                                    autocomplete="organization" title="Enter the business or organization name">
+                            </label>
+                        </li>
+
+                        <li>
+                            <label>
+                                Membership Level *
+                                <select id="membershipLevel" name="membershipLevel" required
+                                    title="Select the membership level">
+                                    <option value="" disabled selected>Select a level</option>
+                                    <option value="np">NP Membership (Non Profit)</option>
+                                    <option value="bronze">Bronze Membership</option>
+                                    <option value="silver">Silver Membership</option>
+                                    <option value="gold">Gold Membership</option>
+                                </select>
+                            </label>
+                        </li>
+
+                        <li>
+                            <label>
+                                Business / Organization Description
+                                <textarea id="description" name="description" rows="5"
+                                    title="Describe your organization"></textarea>
+                            </label>
+                        </li>
+
+                        <!-- hidden timestamp (filled by script.js) -->
+                        <li>
+                            <input type="hidden" name="timestamp" id="timestamp" >
+                        </li>
+
+                        <li>
+                            <input type="submit" value="Submit Membership Application" class="submit-button">
+                        </li>
+
+                    </ul>
+                </form>
+            </section>
+
+            <!-- MEMBERSHIP CARDS -->
+            <aside id="membership-cards" class="membership-cards" aria-labelledby="levels-heading">
+                <h2 id="levels-heading" class="visually-hidden">Membership Levels</h2>
+
+                <div class="membership-card" id="card-np">
+                    <h3>Non Profit Membership</h3>
+                    <p class="card-desc">Benefits for non-profit organizations: directory listings, discounted events,
+                        and more.</p>
+                    <button type="button" class="learn-more" data-modal="modal-np">Learn More</button>
+                </div>
+
+                <div class="membership-card" id="card-bronze">
+                    <h3>Bronze Membership</h3>
+                    <p class="card-desc">Entry plan: directory listing, publications, and access to events.</p>
+                    <button type="button" class="learn-more" data-modal="modal-bronze">Learn More</button>
+                </div>
+
+                <div class="membership-card" id="card-silver">
+                    <h3>Silver Membership</h3>
+                    <p class="card-desc">Expanded benefits: training sessions, featured advertising, and more
+                        advantages.</p>
+                    <button type="button" class="learn-more" data-modal="modal-silver">Learn More</button>
+                </div>
+
+                <div class="membership-card" id="card-gold">
+                    <h3>Gold Membership</h3>
+                    <p class="card-desc">Premium package: all of the above plus sponsorships, advertising, and VIP
+                        events.
+                    </p>
+                    <button type="button" class="learn-more" data-modal="modal-gold">Learn More</button>
+                </div>
+            </aside>
+
+        </div> <!-- .join-layout -->
+
+        <!-- ====================
+             MODALS
+        ==================== -->
+
+        <div class="modal" id="modal-np" role="dialog" aria-modal="true" aria-hidden="true"
+            aria-labelledby="modal-np-title">
+            <div class="modal-content" role="document">
+                <button class="modal-close" data-close aria-label="Cerrar modal">&times;</button>
+                <h2 id="modal-np-title">Non-Profit Membership</h2>
+                <p>Key benefits: free directory listing, access to free training, discounts
+                    on events, and networking opportunities focused on the nonprofit sector.</p>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-bronze" role="dialog" aria-modal="true" aria-hidden="true"
+            aria-labelledby="modal-bronze-title">
+            <div class="modal-content" role="document">
+                <button class="modal-close" data-close aria-label="Cerrar modal">&times;</button>
+                <h2 id="modal-bronze-title">Bronze Membership</h2>
+                <p>Benefits: directory listing, appearance in periodicals, invitations to events, and
+                    access to community resources.</p>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-silver" role="dialog" aria-modal="true" aria-hidden="true"
+            aria-labelledby="modal-silver-title">
+            <div class="modal-content" role="document">
+                <button class="modal-close" data-close aria-label="Cerrar modal">&times;</button>
+                <h2 id="modal-silver-title">Silver Membership</h2>
+                <p>Benefits: everything included in Bronze plus specialized training sessions, featured position in the
+                    directory, and special discounts on events.</p>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-gold" role="dialog" aria-modal="true" aria-hidden="true"
+            aria-labelledby="modal-gold-title">
+            <div class="modal-content" role="document">
+                <button class="modal-close" data-close aria-label="Cerrar modal">&times;</button>
+                <h2 id="modal-gold-title">Gold Membership</h2>
+                <p>Premium benefits: all of the above plus sponsorship at select events, advertising campaigns, and
+                    personalized advice to boost your business.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+
+            <address class="footer-address">
+                Alianza Empresarial San Salvador<br>
+                Paseo Gral. Escalón 911<br>
+                San Salvador, El Salvador.<br>
+                <a href="mailto:info@alianza-eesv.example">info@alianza-eesv.example</a><br>
+                (503) 2221-5678
+            </address>
+
+            <div class="footer-social" aria-hidden="true">
+                <a href="#" aria-label="YouTube">
+                    <img src="images/youtube.svg" alt="YouTube logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="X (Twitter)">
+                    <img src="images/tweeter.svg" alt="Twitter logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn logo" width="36" height="36">
+                </a>
+            </div>
+
+            <div class="footer-right">
+                <p>WDD231 Class Project — Enrique Guardado</p>
+                <p id="copyright"></p>
+                <p id="last-modified"></p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- main script (deferred in original) -->
+    <script src="./scripts/script.js" defer></script>
+</body>
+
+</html>
