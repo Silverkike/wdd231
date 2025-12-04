@@ -4,68 +4,76 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Directory - Alianza Empresarial San Salvador</title>
-    <meta name="description" content="Directorio de negocios locales - Alianza Empresarial San Salvador">
+
+    <title>Discover San Salvador - Alianza Empresarial San Salvador</title>
+    <meta name="description" content="Descubre los principales lugares de interés en San Salvador">
     <meta name="author" content="Enrique Guardado">
 
-    <!-- Open Graph (Facebook) -->
-    <meta property="og:title" content="Directorio - Alianza Empresarial San Salvador">
-    <meta property="og:description" content="Encuentra negocios locales y servicios en San Salvador.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Descubre San Salvador">
+    <meta property="og:description" content="Lugares de interés y atracciones en San Salvador">
     <meta property="og:image" content="https://silverkike.github.io/wdd231/chamber/images/og-image.webp">
-    <meta property="og:url" content="https://silverkike.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://silverkike.github.io/wdd231/chamber/discover.html">
     <meta property="og:type" content="website">
 
-    <!-- favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
 
-    <!-- ✅ Google Fonts preconnect links añadidos -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- normalize (link before your styles) -->
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="site-header">
         <div class="container header-inner">
             <a class="logo" href="index.html" aria-label="Inicio - Alianza Empresarial San Salvador">
-                <img src="images/logo.webp" alt="Alianza Empresarial San Salvador logo" width="160">
+                <img src="images/logo.webp" alt="Alianza Empresarial San Salvador logo" width="160" height="160">
                 <span class="site-title">Alianza Empresarial San Salvador</span>
             </a>
 
             <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list"
-                    aria-label="Abrir menú">☰</button>
+                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menú">
+                    ☰
+                </button>
+
                 <ul id="nav-list" class="nav-list">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container" id="main-content">
-        <h1>Directorio — Alianza Empresarial San Salvador</h1>
+    <!-- MAIN -->
+    <main id="main-content" class="container">
+        <h1>Discover San Salvador</h1>
 
-        <div class="controls-row" aria-hidden="false">
-            <div class="view-controls" role="group" aria-label="Controles de vista">
-                <button id="grid-btn" aria-pressed="true" title="Grid view">🔳 Grid</button>
-                <button id="list-btn" aria-pressed="false" title="List view">📋 List</button>
-            </div>
+        <!-- Mensaje de última visita -->
+        <div id="visit-message" class="visit-message" aria-live="polite">
+            <!-- El mensaje se insertará aquí con JavaScript -->
         </div>
 
-        <section id="members-container" class="members grid-view" aria-live="polite"
-            aria-label="Directorio de miembros">
-        </section>
+        <!-- Contenedor para las tarjetas -->
+        <div id="discover-container" class="discover-container">
+            <!-- Las 8 tarjetas se generarán con JavaScript -->
+             
+             
+        </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container footer-grid">
+
             <address class="footer-address">
                 Alianza Empresarial San Salvador<br>
                 Paseo Gral. Escalón 911<br>
@@ -76,13 +84,13 @@
 
             <div class="footer-social" aria-hidden="true">
                 <a href="#" aria-label="YouTube">
-                    <img src="images/youtube.svg" alt="YouTube logo" width="36" height="36" loading="lazy">
+                    <img src="images/youtube.svg" alt="YouTube logo" width="36" height="36">
                 </a>
                 <a href="#" aria-label="X (Twitter)">
-                    <img src="images/tweeter.svg" alt="Twitter logo" width="36" height="36" loading="lazy">
+                    <img src="images/tweeter.svg" alt="Twitter logo" width="36" height="36">
                 </a>
                 <a href="#" aria-label="LinkedIn">
-                    <img src="images/linkedin.svg" alt="LinkedIn logo" width="36" height="36" loading="lazy">
+                    <img src="images/linkedin.svg" alt="LinkedIn logo" width="36" height="36">
                 </a>
             </div>
 
@@ -91,10 +99,10 @@
                 <p id="copyright"></p>
                 <p id="last-modified"></p>
             </div>
+
         </div>
     </footer>
 
     <script type="module" src="scripts/script.js"></script>
 </body>
-
 </html>
