@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Get Started with Game Development - Gaming & Dev</title>
+    <meta name="description"
+        content="A beginner's guide to starting your game development journey. Learn the first steps, tools, and resources to create your first video game.">
+    <meta name="author" content="Enrique Guardado">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Get Started with Game Development - Gaming & Dev">
+    <meta property="og:description"
+        content="Begin your game development journey with this step-by-step guide for complete beginners.">
+    <meta property="og:image" content="https://silverkike.github.io/wdd231/finalproject/images/og-image.jpg">
+    <meta property="og:url" content="https://silverkike.github.io/wdd231/finalproject/start.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts: Oswald (headings) y Roboto (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body data-page="start">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Home - Gaming & Dev">
+                <div class="logo-placeholder">🎮</div>
+                <span class="site-title">Gaming & Dev</span>
+            </a>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+                    ☰
+                </button>
+
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="engines.html">Game Engines</a></li>
+                    <li><a href="start.html" class="active">Get Started</a></li>
+                    <li><a href="index.html#contact-form">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main-content" class="container">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Start Your Game Development Journey</h1>
+            <p class="hero-subtitle">A step-by-step guide for complete beginners</p>
+            <a href="#step-by-step" class="cta-button">Begin Learning</a>
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section class="content-section">
+            <h2>Welcome to Game Development!</h2>
+            <p>Creating your first video game is an exciting adventure! This guide will help you take your first steps
+                into game development, regardless of your experience level. Remember, every professional game developer
+                started exactly where you are now.</p>
+
+            <div class="inspiration-quote">
+                <p>"The most important skill for a game developer is the ability to keep learning. Technology changes,
+                    but curiosity lasts forever."</p>
+                <cite>— Game Development Wisdom</cite>
+            </div>
+        </section>
+
+        <!-- STEP-BY-STEP GUIDE -->
+        <section id="step-by-step" class="content-section">
+            <h2>Your 6-Step Roadmap</h2>
+            <p>Follow these steps in order to build a solid foundation in game development.</p>
+
+            <div class="roadmap-container">
+                <!-- Step 1 -->
+                <div class="roadmap-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Learn the Fundamentals</h3>
+                        <p>Start with the basic concepts of game development. Understand what makes a game work before
+                            diving into coding.</p>
+                        <div class="step-details">
+                            <h4>What to Learn:</h4>
+                            <ul>
+                                <li>Game loops and game states</li>
+                                <li>Basic programming concepts (variables, functions, loops)</li>
+                                <li>Simple math for games (vectors, angles, collision)</li>
+                                <li>Game design principles</li>
+                            </ul>
+                            <div class="step-resources">
+                                <h5>Resources:</h5>
+                                <a href="https://www.codecademy.com/learn/learn-c-sharp" target="_blank"
+                                    class="resource-link">Codecademy C# Course</a>
+                                <a href="https://www.khanacademy.org/computing/computer-programming" target="_blank"
+                                    class="resource-link">Khan Academy Programming</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="roadmap-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Choose Your Game Engine</h3>
+                        <p>Select a game engine that matches your goals and learning style. Don't spend too much time
+                            deciding—just start!</p>
+                        <div class="step-details">
+                            <h4>Recommendations:</h4>
+                            <ul>
+                                <li><strong>Unity:</strong> Best for beginners, great documentation</li>
+                                <li><strong>Unreal Engine:</strong> Amazing graphics, visual scripting</li>
+                                <li><strong>Godot:</strong> Lightweight, open-source, great for 2D</li>
+                            </ul>
+                            <div class="step-resources">
+                                <h5>Compare Engines:</h5>
+                                <a href="engines.html" class="resource-link">See our Engine Comparison</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="roadmap-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Follow Beginner Tutorials</h3>
+                        <p>Don't try to create your dream game first. Start with simple tutorials to understand the
+                            workflow.</p>
+                        <div class="step-details">
+                            <h4>First Projects:</h4>
+                            <ul>
+                                <li>Pong or Breakout clone</li>
+                                <li>Simple 2D platformer</li>
+                                <li>Top-down shooter</li>
+                                <li>Endless runner game</li>
+                            </ul>
+                            <div class="step-resources">
+                                <h5>Tutorial Recommendations:</h5>
+                                <a href="https://learn.unity.com/" target="_blank" class="resource-link">Unity Learn
+                                    (free courses)</a>
+                                <a href="https://www.youtube.com/c/Brackeys" target="_blank"
+                                    class="resource-link">Brackeys
+                                    YouTube Channel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="roadmap-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Create Your First Original Game</h3>
+                        <p>Once you've completed tutorials, make a small game with your own ideas. Keep it simple and
+                            scope small!</p>
+                        <div class="step-details">
+                            <h4>Project Guidelines:</h4>
+                            <ul>
+                                <li>1-2 week development time maximum</li>
+                                <li>One core mechanic only</li>
+                                <li>Basic graphics (programmer art is fine!)</li>
+                                <li>Focus on completing the game, not perfection</li>
+                            </ul>
+                            <div class="step-resources">
+                                <h5>Game Jams:</h5>
+                                <a href="https://itch.io/jams" target="_blank" class="resource-link">itch.io Game
+                                    Jams</a>
+                                <a href="https://globalgamejam.org/" target="_blank" class="resource-link">Global Game
+                                    Jam</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="roadmap-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Learn from Feedback</h3>
+                        <p>Show your game to others and listen to their feedback. This is how you improve as a
+                            developer.</p>
+                        <div class="step-details">
+                            <h4>Feedback Channels:</h4>
+                            <ul>
+                                <li>Friends and family (ask specific questions)</li>
+                                <li>Online communities (Reddit, Discord)</li>
+                                <li>Game development forums</li>
+                                <li>Local meetups or game jams</li>
+                            </ul>
+                            <div class="step-resources">
+                                <h5>Communities:</h5>
+                                <a href="https://www.reddit.com/r/gamedev/" target="_blank"
+                                    class="resource-link">r/gamedev on Reddit</a>
+                                <a href="https://discord.gg/gamedev" target="_blank" class="resource-link">Game
+                                    Development Discord</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="roadmap-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Keep Learning and Building</h3>
+                        <p>Game development is a journey of continuous learning. Each project teaches you something new.
+                        </p>
+                        <div class="step-details">
+                            <h4>Next Steps:</h4>
+                            <ul>
+                                <li>Learn version control (Git)</li>
+                                <li>Study game design patterns</li>
+                                <li>Explore different game genres</li>
+                                <li>Build a portfolio of small games</li>
+                            </ul>
+                            <div class="step-resources">
+                                <h5>Advanced Learning:</h5>
+                                <a href="https://gameprogrammingpatterns.com/" target="_blank"
+                                    class="resource-link">Game Programming Patterns Book</a>
+                                <a href="https://www.gamedev.tv/" target="_blank" class="resource-link">GameDev.tv
+                                    Courses</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESSENTIAL TOOLS -->
+        <section class="content-section">
+            <h2>Essential Tools & Resources</h2>
+            <p>Here are the essential tools you'll need to start your game development journey.</p>
+
+            <div class="tools-grid">
+                <div class="tool-category">
+                    <h3>🎨 Graphics & Art</h3>
+                    <ul>
+                        <li><strong>Aseprite:</strong> Pixel art editor ($20)</li>
+                        <li><strong>Krita:</strong> Free digital painting</li>
+                        <li><strong>Blender:</strong> Free 3D modeling</li>
+                        <li><strong>Kenney Assets:</strong> Free game assets</li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <h3>🔊 Audio & Music</h3>
+                    <ul>
+                        <li><strong>Bosca Ceoil:</strong> Free music maker</li>
+                        <li><strong>BFXR:</strong> Retro sound effects</li>
+                        <li><strong>Audacity:</strong> Audio editing</li>
+                        <li><strong>Freesound.org:</strong> Free sounds</li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <h3>📚 Learning Platforms</h3>
+                    <ul>
+                        <li><strong>Unity Learn:</strong> Official Unity courses</li>
+                        <li><strong>Unreal Online Learning:</strong> Free Unreal courses</li>
+                        <li><strong>YouTube:</strong> Brackeys, Code Monkey</li>
+                        <li><strong>Udemy:</strong> Affordable courses</li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <h3>💻 Development Tools</h3>
+                    <ul>
+                        <li><strong>Visual Studio Code:</strong> Free code editor</li>
+                        <li><strong>Git & GitHub:</strong> Version control</li>
+                        <li><strong>Trello:</strong> Project management</li>
+                        <li><strong>Draw.io:</strong> Game design diagrams</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMON MISTAKES -->
+        <section class="content-section">
+            <h2>Common Beginner Mistakes to Avoid</h2>
+
+            <div class="mistakes-container">
+                <div class="mistake-card">
+                    <h3>❌ Starting Too Big</h3>
+                    <p>Don't try to make an MMO or open-world RPG as your first game. Start with Pong or a simple
+                        platformer.</p>
+                </div>
+
+                <div class="mistake-card">
+                    <h3>❌ Not Finishing Projects</h3>
+                    <p>Completing a small game is better than abandoning a big one. Finish what you start, no matter how
+                        simple.</p>
+                </div>
+
+                <div class="mistake-card">
+                    <h3>❌ Comparing to AAA Games</h3>
+                    <p>AAA games have teams of 100+ people and multi-million dollar budgets. Compare yourself to your
+                        past self instead.</p>
+                </div>
+
+                <div class="mistake-card">
+                    <h3>❌ Not Asking for Help</h3>
+                    <p>The game dev community is incredibly supportive. Ask questions on forums, Discord, or Reddit when
+                        you're stuck.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GET STARTED TODAY -->
+        <section class="content-section call-to-action">
+            <h2>Ready to Begin?</h2>
+            <p>Don't wait for the perfect moment—start today! Choose one small step and take it now.</p>
+
+            <div class="action-buttons">
+                <a href="engines.html" class="btn btn-website">🎮 Choose Your Game Engine</a>
+                <a href="https://learn.unity.com/project/unity-essentials" target="_blank" class="btn btn-trailer">📚
+                    Start Unity Essentials</a>
+                <button id="generate-idea" class="btn btn-favorite">💡 Get a Game Idea</button>
+            </div>
+
+            <div id="game-idea-result" class="idea-result"></div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <address class="footer-address">
+                Gaming & Dev Educational Project<br>
+                WDD231 - BYU-Idaho<br>
+                San Salvador, El Salvador<br>
+                <a href="mailto:cguardadocruz@byu.edu">cguardadocruz@byu.edu</a><br>
+                (208) 496-1411
+            </address>
+
+            <div class="footer-social" aria-hidden="true">
+                <a href="#" aria-label="YouTube">
+                    <img src="images/youtube.svg" alt="YouTube logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="X (Twitter)">
+                    <img src="images/tweeter.svg" alt="Twitter logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn logo" width="36" height="36">
+                </a>
+            </div>
+
+            <div class="footer-right">
+                <p>WDD231 Final Project — Enrique Guardado</p>
+                <p id="copyright"></p>
+                <p id="last-modified"></p>
+                <p><a href="attributions.html">Attributions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" type="module"></script>
+</body>
+
+</html>

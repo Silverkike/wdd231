@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Gaming & Dev: How Video Games Are Created - Home</title>
+    <meta name="description"
+        content="Learn how video games are created from start to finish. Beginner-friendly guide to game development concepts, engines, and first steps.">
+    <meta name="author" content="Enrique Guardado">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gaming & Dev: How Video Games Are Created">
+    <meta property="og:description"
+        content="A beginner's guide to video game development. Learn concepts, engines, and how to start creating your own games.">
+    <meta property="og:image" content="https://silverkike.github.io/wdd231/finalproject/images/og-image.jpg">
+    <meta property="og:url" content="https://silverkike.github.io/wdd231/finalproject/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon (crearemos uno después) -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts: Oswald (headings) y Roboto (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body data-page="home">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Home - Gaming & Dev">
+                <!-- Logo temporal - puedes reemplazarlo después -->
+                <div class="logo-placeholder">🎮</div>
+                <span class="site-title">Gaming & Dev</span>
+            </a>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+                    ☰
+                </button>
+
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="engines.html">Game Engines</a></li>
+                    <li><a href="start.html">Get Started</a></li>
+                    <li><a href="#contact-form">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main-content" class="container">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>How Video Games Are Created</h1>
+            <p class="hero-subtitle">A beginner-friendly guide to game development concepts, tools, and first steps</p>
+            <a href="#game-concepts" class="cta-button">Explore Game Development</a>
+        </section>
+
+        <!-- WHAT IS GAME DEVELOPMENT? -->
+        <section id="game-concepts" class="content-section">
+            <h2>What Is Video Game Development?</h2>
+            <p>Game development is the process of creating video games. It combines creativity with technology,
+                involving design, programming, art, sound, and testing. Whether you're interested in indie games or AAA
+                titles, understanding these core concepts is essential.</p>
+
+            <div class="cards-container" id="concepts-container">
+                <!-- 15+ game development concepts will be loaded here by JavaScript -->
+                <p class="loading-message">Loading game development concepts...</p>
+            </div>
+        </section>
+
+        <!-- FEATURED GAME ENGINES PREVIEW -->
+        <section class="content-section engines-preview">
+            <h2>Popular Game Engines</h2>
+            <p>Game engines are frameworks that provide developers with essential tools to create games more
+                efficiently. Here are the three most popular:</p>
+
+            <div class="preview-cards">
+                <article class="preview-card">
+                    <h3>Unity</h3>
+                    <p>Perfect for beginners and professionals alike. Great for 2D, 3D, VR, and mobile games.</p>
+                    <a href="engines.html#unity" class="learn-more-link">Learn about Unity →</a>
+                </article>
+
+                <article class="preview-card">
+                    <h3>Unreal Engine</h3>
+                    <p>Known for stunning graphics and visual effects. Used by many AAA game studios.</p>
+                    <a href="engines.html#unreal" class="learn-more-link">Learn about Unreal →</a>
+                </article>
+
+                <article class="preview-card">
+                    <h3>Godot</h3>
+                    <p>Free, open-source, and lightweight. Excellent for 2D games and indie developers.</p>
+                    <a href="engines.html#godot" class="learn-more-link">Learn about Godot →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- VIDEO GAMES SHOWCASE -->
+        <section id="games-showcase" class="content-section">
+            <h2>Featured Video Games</h2>
+            <p>Explore a curated list of video games, their engines, and genres. Filter by category to see specific types.</p>
+        
+            <div class="games-controls">
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">All Games</button>
+                    <button class="category-btn" data-category="adventure">Adventure</button>
+                    <button class="category-btn" data-category="rpg">RPG</button>
+                    <button class="category-btn" data-category="unreal">Unreal Engine</button>
+                    <button class="category-btn" data-category="unity">Unity</button>
+                </div>
+                <div id="game-counter" class="game-counter">Showing 0 games</div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search games by name, genre, or engine...">
+                <button id="search-btn" class="btn btn-search">🔍 Search</button>
+            </div>
+        
+            <div id="games-container" class="games-container">
+                <!-- Los juegos se cargarán aquí dinámicamente -->
+                <p class="loading-message">Loading games...</p>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section id="contact-form" class="content-section">
+            <h2>Have Questions? Ask Us!</h2>
+            <p>Submit your questions about game development or suggestions for this website.</p>
+
+            <form action="form-action.html" method="get" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Your Experience Level:</label>
+                    <select id="experience" name="experience">
+                        <option value="beginner">Beginner (just starting)</option>
+                        <option value="intermediate">Intermediate (some experience)</option>
+                        <option value="advanced">Advanced (experienced developer)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Question or Message:</label>
+                    <textarea id="message" name="message" rows="5" required
+                        placeholder="What would you like to know about game development?"></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <address class="footer-address">
+                Gaming & Dev Educational Project<br>
+                WDD231 - BYU-Idaho<br>
+                San Salvador, El Salvador<br>
+                <a href="mailto:cguardadocruz@byu.edu">cguardadocruz@byu.edu</a><br>
+                (208) 496-1411
+            </address>
+    
+            <div class="footer-social" aria-hidden="true">
+                <a href="#" aria-label="YouTube">
+                    <img src="images/youtube.svg" alt="YouTube logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="X (Twitter)">
+                    <img src="images/tweeter.svg" alt="Twitter logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn logo" width="36" height="36">
+                </a>
+            </div>
+    
+            <div class="footer-right">
+                <p>WDD231 Final Project — Enrique Guardado</p>
+                <p id="copyright"></p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DIALOG (for concept details) -->
+    <div id="concept-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <h2 id="modal-title">Game Development Concept</h2>
+            <div id="modal-body">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Agrega esto ANTES del cierre de </body> (después del modal de conceptos) -->
+    <div id="game-detail-modal" class="modal" role="dialog" aria-labelledby="game-modal-title" aria-hidden="true">
+        <div class="modal-content game-modal-content">
+            <button class="modal-close" aria-label="Close modal">×</button>
+    
+            <div class="modal-game-header">
+                <div class="modal-game-image-container">
+                    <img id="modal-game-image" src="https://via.placeholder.com/600x400/2d3748/ffffff?text=Game+Image"
+                        alt="Game image placeholder" class="modal-game-img">
+                    <div class="modal-game-badges">
+                        <span id="modal-game-year" class="game-badge year-badge"></span>
+                        <span id="modal-game-engine" class="game-badge engine-badge"></span>
+                    </div>
+                </div>
+    
+                <div class="modal-game-info">
+                    <h2 id="game-modal-title">Game Title</h2>
+                    <div class="modal-game-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Genre:</span>
+                            <span id="modal-game-genre" class="meta-value"></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Developer:</span>
+                            <span id="modal-game-developer" class="meta-value">Various</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Platforms:</span>
+                            <span id="modal-game-platforms" class="meta-value">Multiple</span>
+                        </div>
+                    </div>
+    
+                    <div class="modal-game-description">
+                        <h3>Description</h3>
+                        <p id="modal-game-full-description"></p>
+                    </div>
+    
+                    <div class="modal-game-stats">
+                        <h3>Development Insights</h3>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-label">Engine Used</span>
+                                <span id="modal-game-engine-detail" class="stat-value"></span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-label">Release Year</span>
+                                <span id="modal-game-release-year" class="stat-value"></span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-label">Development Time</span>
+                                <span id="modal-game-dev-time" class="stat-value">3-5 years</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-label">Team Size</span>
+                                <span id="modal-game-team-size" class="stat-value">50-500+</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="modal-game-actions">
+                        <a id="modal-game-trailer-link" href="#" target="_blank" class="btn btn-trailer-large">🎬 Watch
+                            Official Trailer</a>
+                        <a id="modal-game-website-link" href="#" target="_blank" class="btn btn-website-large">🌐 Visit
+                            Official Website</a>
+                        <button id="save-favorite-btn" class="btn btn-favorite">⭐ Add to Favorites</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js" type="module"></script>
+</body>
+
+</html>

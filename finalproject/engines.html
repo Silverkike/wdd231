@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Game Engines - Gaming & Dev</title>
+    <meta name="description"
+        content="Learn about the most popular game engines: Unity, Unreal Engine, and Godot. Compare features and choose the right one for your project.">
+    <meta name="author" content="Enrique Guardado">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Game Engines - Gaming & Dev">
+    <meta property="og:description"
+        content="Compare Unity, Unreal Engine, and Godot. Learn which game engine is best for your project.">
+    <meta property="og:image" content="https://silverkike.github.io/wdd231/finalproject/images/og-image.jpg">
+    <meta property="og:url" content="https://silverkike.github.io/wdd231/finalproject/engines.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts: Oswald (headings) y Roboto (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body data-page="engines">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Home - Gaming & Dev">
+                <div class="logo-placeholder">🎮</div>
+                <span class="site-title">Gaming & Dev</span>
+            </a>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+                    ☰
+                </button>
+
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="engines.html" class="active">Game Engines</a></li>
+                    <li><a href="start.html">Get Started</a></li>
+                    <li><a href="index.html#contact-form">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main-content" class="container">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Game Engines Explained</h1>
+            <p class="hero-subtitle">Choose the right tool for your game development journey</p>
+            <a href="#engine-comparison" class="cta-button">Compare Engines</a>
+        </section>
+
+        <!-- WHAT IS A GAME ENGINE? -->
+        <section class="content-section">
+            <h2>What Is a Game Engine?</h2>
+            <p>A game engine is a software framework designed to create and develop video games. Developers use them to
+                build games for consoles, mobile devices, and personal computers. The core functionality typically
+                includes:</p>
+
+            <div class="engine-features-grid">
+                <div class="feature-card">
+                    <h3>Rendering Engine</h3>
+                    <p>Handles 2D/3D graphics, lighting, shadows, and visual effects for the game's visuals.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Physics Engine</h3>
+                    <p>Simulates real-world physics like gravity, collisions, and object interactions.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Audio System</h3>
+                    <p>Manages sound effects, music, and spatial audio for immersive experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Scripting System</h3>
+                    <p>Allows developers to create game logic and behaviors without low-level programming.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Animation System</h3>
+                    <p>Controls character movements, cutscenes, and dynamic animations.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>AI System</h3>
+                    <p>Provides tools for creating intelligent non-player characters (NPCs).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENGINE COMPARISON -->
+        <section id="engine-comparison" class="content-section">
+            <h2>Popular Game Engines</h2>
+            <p>Here are the three most popular game engines used by developers worldwide. Each has its strengths and
+                ideal use cases.</p>
+
+            <div class="engines-container">
+                <!-- Unity Engine -->
+                <article id="unity" class="engine-card">
+                    <div class="engine-header">
+                        <h3>Unity</h3>
+                        <p class="engine-subtitle">The versatile multi-platform engine</p>
+                        <div class="engine-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">Best for Beginners</span>
+                        </div>
+                    </div>
+
+                    <div class="engine-content">
+                        <div class="engine-description">
+                            <p>Unity is known for its user-friendly interface and excellent documentation. It's
+                                particularly strong for 2D games, mobile development, and VR/AR experiences.</p>
+                            <ul class="engine-highlights">
+                                <li>Great for indie developers and small teams</li>
+                                <li>Huge asset store with ready-made content</li>
+                                <li>Excellent cross-platform support</li>
+                                <li>Uses C# for programming</li>
+                            </ul>
+                        </div>
+
+                        <div class="engine-specs">
+                            <div class="spec">
+                                <span class="spec-label">Programming:</span>
+                                <span class="spec-value">C#</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Best For:</span>
+                                <span class="spec-value">2D games, Mobile, VR/AR</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">License:</span>
+                                <span class="spec-value">Free for small revenue</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Learning Curve:</span>
+                                <span class="spec-value curve-easy">Easy</span>
+                            </div>
+                        </div>
+
+                        <div class="engine-links">
+                            <a href="https://unity.com" target="_blank" class="btn btn-website">🌐 Official Website</a>
+                            <button class="btn btn-trailer unity-games-btn" data-engine="unity">🎮 Show Unity
+                                Games</button>
+                        </div>
+
+                        <div id="unity-games-container" class="api-games-container" style="display: none;">
+                            <div class="api-loading">
+                                <p>Loading Unity games from RAWG API...</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Unreal Engine -->
+                <article id="unreal" class="engine-card">
+                    <div class="engine-header">
+                        <h3>Unreal Engine</h3>
+                        <p class="engine-subtitle">AAA quality with stunning visuals</p>
+                        <div class="engine-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">Best Graphics</span>
+                        </div>
+                    </div>
+
+                    <div class="engine-content">
+                        <div class="engine-description">
+                            <p>Unreal Engine is renowned for its cutting-edge graphics and visual effects. It's the
+                                choice for many AAA game studios and high-budget productions.</p>
+                            <ul class="engine-highlights">
+                                <li>Industry-leading graphics quality</li>
+                                <li>Blueprints visual scripting system</li>
+                                <li>Advanced cinematic tools</li>
+                                <li>Real-time ray tracing support</li>
+                            </ul>
+                        </div>
+
+                        <div class="engine-specs">
+                            <div class="spec">
+                                <span class="spec-label">Programming:</span>
+                                <span class="spec-value">C++, Blueprints</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Best For:</span>
+                                <span class="spec-value">AAA games, High-end graphics</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">License:</span>
+                                <span class="spec-value">5% royalty after $1M</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Learning Curve:</span>
+                                <span class="spec-value curve-hard">Hard</span>
+                            </div>
+                        </div>
+
+                        <div class="engine-links">
+                            <a href="https://unrealengine.com" target="_blank" class="btn btn-website">🌐 Official
+                                Website</a>
+                            <button class="btn btn-trailer unreal-games-btn" data-engine="unreal">🎮 Show Unreal
+                                Games</button>
+                        </div>
+
+                        <div id="unreal-games-container" class="api-games-container" style="display: none;">
+                            <div class="api-loading">
+                                <p>Loading Unreal Engine games from RAWG API...</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Godot Engine -->
+                <article id="godot" class="engine-card">
+                    <div class="engine-header">
+                        <h3>Godot</h3>
+                        <p class="engine-subtitle">Free, open-source, and lightweight</p>
+                        <div class="engine-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-text">Best Open-Source</span>
+                        </div>
+                    </div>
+
+                    <div class="engine-content">
+                        <div class="engine-description">
+                            <p>Godot is a completely free and open-source game engine that has gained massive popularity
+                                in recent years, especially for 2D game development.</p>
+                            <ul class="engine-highlights">
+                                <li>100% free with MIT license</li>
+                                <li>Lightweight and runs on low-end hardware</li>
+                                <li>Excellent 2D engine with pixel-perfect rendering</li>
+                                <li>Python-like GDScript language</li>
+                            </ul>
+                        </div>
+
+                        <div class="engine-specs">
+                            <div class="spec">
+                                <span class="spec-label">Programming:</span>
+                                <span class="spec-value">GDScript, C#, C++</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Best For:</span>
+                                <span class="spec-value">2D games, Indie, Open-source</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">License:</span>
+                                <span class="spec-value">MIT (completely free)</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Learning Curve:</span>
+                                <span class="spec-value curve-medium">Medium</span>
+                            </div>
+                        </div>
+
+                        <div class="engine-links">
+                            <a href="https://godotengine.org" target="_blank" class="btn btn-website">🌐 Official
+                                Website</a>
+                            <button class="btn btn-trailer godot-games-btn" data-engine="godot">🎮 Show Godot
+                                Games</button>
+                        </div>
+
+                        <div id="godot-games-container" class="api-games-container" style="display: none;">
+                            <div class="api-loading">
+                                <p>Loading Godot games from RAWG API...</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- COMPARISON TABLE -->
+        <section class="content-section">
+            <h2>Quick Comparison Table</h2>
+            <div class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Unity</th>
+                            <th>Unreal Engine</th>
+                            <th>Godot</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Best For</td>
+                            <td>Indie, Mobile, VR/AR</td>
+                            <td>AAA, High-end graphics</td>
+                            <td>2D, Open-source, Learning</td>
+                        </tr>
+                        <tr>
+                            <td>Programming Languages</td>
+                            <td>C#</td>
+                            <td>C++, Blueprints</td>
+                            <td>GDScript, C#, C++</td>
+                        </tr>
+                        <tr>
+                            <td>Graphics Quality</td>
+                            <td>Good</td>
+                            <td>Excellent</td>
+                            <td>Good (2D is excellent)</td>
+                        </tr>
+                        <tr>
+                            <td>Learning Curve</td>
+                            <td>Easy</td>
+                            <td>Hard</td>
+                            <td>Medium</td>
+                        </tr>
+                        <tr>
+                            <td>Community Size</td>
+                            <td>Very Large</td>
+                            <td>Large</td>
+                            <td>Growing Fast</td>
+                        </tr>
+                        <tr>
+                            <td>Cost</td>
+                            <td>Free up to $100K/year</td>
+                            <td>5% royalty after $1M</td>
+                            <td>Completely Free</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- RECOMMENDATION -->
+        <section class="content-section">
+            <h2>Which Engine Should You Choose?</h2>
+            <div class="recommendation-cards">
+                <div class="recommendation-card">
+                    <h3>Choose Unity if...</h3>
+                    <ul>
+                        <li>You're a complete beginner</li>
+                        <li>You want to make mobile or VR games</li>
+                        <li>You prefer C# over C++</li>
+                        <li>You need lots of tutorials and documentation</li>
+                        <li>You're targeting multiple platforms</li>
+                    </ul>
+                </div>
+                <div class="recommendation-card">
+                    <h3>Choose Unreal if...</h3>
+                    <ul>
+                        <li>You prioritize stunning graphics</li>
+                        <li>You're interested in AAA game development</li>
+                        <li>You prefer visual scripting (Blueprints)</li>
+                        <li>You need advanced cinematic tools</li>
+                        <li>You're working on a large team project</li>
+                    </ul>
+                </div>
+                <div class="recommendation-card">
+                    <h3>Choose Godot if...</h3>
+                    <ul>
+                        <li>You want completely free and open-source</li>
+                        <li>You're focusing on 2D games</li>
+                        <li>You need a lightweight engine</li>
+                        <li>You prefer Python-like scripting</li>
+                        <li>You value simplicity and minimalism</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- API SHOWCASE -->
+        <section class="content-section">
+            <h2>Games Made with These Engines</h2>
+            <p>Explore popular games created with each engine. This data is fetched from the RAWG Video Games Database
+                API.</p>
+
+            <div class="engine-selector">
+                <button class="engine-select-btn active" data-engine="all">All Games</button>
+                <button class="engine-select-btn" data-engine="unity">Unity Games</button>
+                <button class="engine-select-btn" data-engine="unreal">Unreal Games</button>
+                <button class="engine-select-btn" data-engine="godot">Godot Games</button>
+            </div>
+
+            <div id="api-games-container" class="api-games-showcase">
+                <div class="api-loading">
+                    <p>Loading games from RAWG API...</p>
+                    <div class="loading-spinner"></div>
+                </div>
+            </div>
+
+            <div class="api-info">
+                <p><small>Games data provided by <a href="https://rawg.io/apidocs" target="_blank">RAWG Video Games
+                            Database API</a>. API requests are limited to 20,000 per month.</small></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <address class="footer-address">
+                Gaming & Dev Educational Project<br>
+                WDD231 - BYU-Idaho<br>
+                San Salvador, El Salvador<br>
+                <a href="mailto:cguardadocruz@byu.edu">cguardadocruz@byu.edu</a><br>
+                (208) 496-1411
+            </address>
+
+            <div class="footer-social" aria-hidden="true">
+                <a href="#" aria-label="YouTube">
+                    <img src="images/youtube.svg" alt="YouTube logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="X (Twitter)">
+                    <img src="images/tweeter.svg" alt="Twitter logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn logo" width="36" height="36">
+                </a>
+            </div>
+
+            <div class="footer-right">
+                <p>WDD231 Final Project — Enrique Guardado</p>
+                <p id="copyright"></p>
+                <p id="last-modified"></p>
+                <p><a href="attributions.html">Attributions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js" type="module"></script>
+</body>
+
+</html>

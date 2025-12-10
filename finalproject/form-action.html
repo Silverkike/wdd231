@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Form Submission Received - Gaming & Dev</title>
+    <meta name="description" content="Thank you for your submission to Gaming & Dev">
+    <meta name="author" content="Enrique Guardado">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body data-page="form-action">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Home - Gaming & Dev">
+                <div class="logo-placeholder">🎮</div>
+                <span class="site-title">Gaming & Dev</span>
+            </a>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+                    ☰
+                </button>
+
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="engines.html">Game Engines</a></li>
+                    <li><a href="start.html">Get Started</a></li>
+                    <li><a href="index.html#contact-form">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="container">
+        <section class="content-section" style="text-align: center; padding: var(--space-xl);">
+            <h1>Thank You for Your Submission!</h1>
+
+            <div class="submission-result" id="submission-data">
+                <!-- Los datos del formulario se mostrarán aquí -->
+                <p class="loading-message">Processing your submission...</p>
+            </div>
+
+            <div class="confirmation-message">
+                <p>We've received your message and will get back to you as soon as possible.</p>
+                <p>In the meantime, check out our <a href="start.html">Get Started</a> guide for beginner tips!</p>
+            </div>
+
+            <div class="action-buttons">
+                <a href="index.html" class="btn btn-website">🏠 Return to Home</a>
+                <a href="start.html" class="btn btn-trailer">🎮 Get Started Guide</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <address class="footer-address">
+                Gaming & Dev Educational Project<br>
+                WDD231 - BYU-Idaho<br>
+                San Salvador, El Salvador<br>
+                <a href="mailto:cguardadocruz@byu.edu">cguardadocruz@byu.edu</a><br>
+                (208) 496-1411
+            </address>
+
+            <div class="footer-social" aria-hidden="true">
+                <a href="#" aria-label="YouTube">
+                    <img src="images/youtube.svg" alt="YouTube logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="X (Twitter)">
+                    <img src="images/tweeter.svg" alt="Twitter logo" width="36" height="36">
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn logo" width="36" height="36">
+                </a>
+            </div>
+
+            <div class="footer-right">
+                <p>WDD231 Final Project — Enrique Guardado</p>
+                <p id="copyright"></p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" type="module"></script>
+</body>
+
+</html>

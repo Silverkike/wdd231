@@ -1,0 +1,200 @@
+[
+    {
+        "id": 1,
+        "name": "The Legend of Zelda: Breath of the Wild",
+        "year": 2017,
+        "engine": "Custom (Nintendo)",
+        "genre": "Action-Adventure",
+        "description": "An open-world adventure game that redefined the Zelda series with its vast exploration and physics-based gameplay.",
+        "image": "images/zelda-botw.webp",
+        "trailer": "https://www.youtube.com/watch?v=zw47_q9wbBE",
+        "website": "https://www.zelda.com/breath-of-the-wild/"
+    },
+    {
+        "id": 2,
+        "name": "Minecraft",
+        "year": 2011,
+        "engine": "Lightweight Java Game Library (LWJGL)",
+        "genre": "Sandbox, Survival",
+        "description": "A block-building sandbox game that allows players to create and explore virtual worlds made of blocks.",
+        "image": "images/minecraft.webp",
+        "trailer": "https://www.youtube.com/watch?v=MmB9b5njVbA",
+        "website": "https://www.minecraft.net/"
+    },
+    {
+        "id": 3,
+        "name": "Fortnite",
+        "year": 2017,
+        "engine": "Unreal Engine 4",
+        "genre": "Battle Royale, Survival",
+        "description": "A popular battle royale game with building mechanics, known for its vibrant graphics and cultural impact.",
+        "image": "images/fortnite.webp",
+        "trailer": "https://www.youtube.com/watch?v=2gUtfBmw86Y",
+        "website": "https://www.fortnite.com/"
+    },
+    {
+        "id": 4,
+        "name": "Cyberpunk 2077",
+        "year": 2020,
+        "engine": "REDengine 4",
+        "genre": "Action RPG",
+        "description": "An open-world RPG set in a dystopian future, developed by CD Projekt Red.",
+        "image": "images/cyberpunk.webp",
+        "trailer": "https://www.youtube.com/watch?v=8X2kIfS6fb8",
+        "website": "https://www.cyberpunk.net/"
+    },
+    {
+        "id": 5,
+        "name": "Among Us",
+        "year": 2018,
+        "engine": "Unity",
+        "genre": "Social Deduction",
+        "description": "A multiplayer game where players work together on a spaceship while impostors try to sabotage them.",
+        "image": "images/among-us.webp",
+        "trailer": "https://www.youtube.com/watch?v=NSJ4cESNQfE",
+        "website": "https://www.innersloth.com/games/among-us/"
+    },
+    {
+        "id": 6,
+        "name": "Call of Duty: Warzone",
+        "year": 2020,
+        "engine": "IW Engine",
+        "genre": "Battle Royale, First-person Shooter",
+        "description": "A free-to-play battle royale game set in the Call of Duty universe.",
+        "image": "images/warzone.webp",
+        "trailer": "https://www.youtube.com/watch?v=0E44DClsX5Q",
+        "website": "https://www.callofduty.com/warzone"
+    },
+    {
+        "id": 7,
+        "name": "Grand Theft Auto V",
+        "year": 2013,
+        "engine": "RAGE (Rockstar Advanced Game Engine)",
+        "genre": "Action-Adventure",
+        "description": "An open-world game that follows three criminals in the fictional state of San Andreas.",
+        "image": "images/gta-v.webp",
+        "trailer": "https://www.youtube.com/watch?v=QkkoHAzjnUs",
+        "website": "https://www.rockstargames.com/V/"
+    },
+    {
+        "id": 8,
+        "name": "The Witcher 3: Wild Hunt",
+        "year": 2015,
+        "engine": "REDengine 3",
+        "genre": "Action RPG",
+        "description": "An award-winning RPG that follows Geralt of Rivia in a vast open world.",
+        "image": "images/witcher3.webp",
+        "trailer": "https://www.youtube.com/watch?v=c0i88t0Kacs",
+        "website": "https://www.thewitcher.com/en/witcher3"
+    },
+    {
+        "id": 9,
+        "name": "Hades",
+        "year": 2020,
+        "engine": "Custom (Supergiant)",
+        "genre": "Roguelike, Action",
+        "description": "A roguelike dungeon crawler that combines fast-paced action with a compelling story.",
+        "image": "images/hades.webp",
+        "trailer": "https://www.youtube.com/watch?v=Bz8l935Bv0Y",
+        "website": "https://www.supergiantgames.com/games/hades/"
+    },
+    {
+        "id": 10,
+        "name": "Overwatch 2",
+        "year": 2022,
+        "engine": "Proprietary (Blizzard)",
+        "genre": "First-person Shooter",
+        "description": "A team-based multiplayer first-person shooter with unique heroes and abilities.",
+        "image": "images/overwatch2.webp",
+        "trailer": "https://www.youtube.com/watch?v=GKXS_YA9s7E",
+        "website": "https://overwatch.blizzard.com/"
+    },
+    {
+        "id": 11,
+        "name": "Elden Ring",
+        "year": 2022,
+        "engine": "Custom (FromSoftware)",
+        "genre": "Action RPG",
+        "description": "An open-world action RPG developed by FromSoftware and written by George R. R. Martin.",
+        "image": "images/elden-ring.webp",
+        "trailer": "https://www.youtube.com/watch?v=E3Huy2cdih0",
+        "website": "https://en.bandainamcoent.eu/elden-ring/elden-ring"
+    },
+    {
+        "id": 12,
+        "name": "Stardew Valley",
+        "year": 2016,
+        "engine": "MonoGame",
+        "genre": "Simulation, RPG",
+        "description": "A farming simulation RPG where players manage a farm and interact with the local community.",
+        "image": "images/stardew-valley.webp",
+        "trailer": "https://www.youtube.com/watch?v=ot7uXNQskhs",
+        "website": "https://www.stardewvalley.net/"
+    },
+    {
+        "id": 13,
+        "name": "Valorant",
+        "year": 2020,
+        "engine": "Unreal Engine 4",
+        "genre": "First-person Shooter",
+        "description": "A tactical first-person shooter that combines precise gunplay with unique agent abilities.",
+        "image": "images/valorant.webp",
+        "trailer": "https://www.youtube.com/watch?v=lWr6dhTcu-E",
+        "website": "https://playvalorant.com/"
+    },
+    {
+        "id": 14,
+        "name": "Portal 2",
+        "year": 2011,
+        "engine": "Source",
+        "genre": "Puzzle, Platformer",
+        "description": "A puzzle-platform game that uses portals to solve challenging puzzles in a test chamber.",
+        "image": "images/portal2.webp",
+        "trailer": "https://www.youtube.com/watch?v=tax4e4hBBZc",
+        "website": "https://www.thinkwithportals.com/"
+    },
+    {
+        "id": 15,
+        "name": "Red Dead Redemption 2",
+        "year": 2018,
+        "engine": "RAGE (Rockstar Advanced Game Engine)",
+        "genre": "Action-Adventure",
+        "description": "An epic Western-themed adventure that follows Arthur Morgan and the Van der Linde gang.",
+        "image": "images/rdr2.webp",
+        "trailer": "https://www.youtube.com/watch?v=eaW0tYpxyp0",
+        "website": "https://www.rockstargames.com/reddeadredemption2/"
+    },
+    {
+        "id": 16,
+        "name": "God of War (2018)",
+        "year": 2018,
+        "engine": "Custom (Santa Monica Studio)",
+        "genre": "Action-Adventure",
+        "description": "A soft reboot of the God of War series, following Kratos and his son Atreus in a Norse mythology setting.",
+        "image": "images/god-of-war.webp",
+        "trailer": "https://www.youtube.com/watch?v=K0u_kAWLJOA",
+        "website": "https://www.playstation.com/en-us/god-of-war/"
+    },
+    {
+        "id": 17,
+        "name": "League of Legends",
+        "year": 2009,
+        "engine": "Custom (Riot Games)",
+        "genre": "MOBA",
+        "description": "A popular multiplayer online battle arena game where two teams of five champions compete to destroy the enemy base.",
+        "image": "images/league-of-legends.webp",
+        "trailer": "https://www.youtube.com/watch?v=vzHrjOMfHPY",
+        "website": "https://www.leagueoflegends.com/"
+    },
+    {
+        "id": 18,
+        "name": "Animal Crossing: New Horizons",
+        "year": 2020,
+        "engine": "Custom (Nintendo)",
+        "genre": "Social Simulation",
+        "description": "A life simulation game where players develop an island community filled with anthropomorphic animals.",
+        "image": "images/animal-crossing.webp",
+        "trailer": "https://www.youtube.com/watch?v=_3YNL0OWio0",
+        "website": "https://www.animal-crossing.com/new-horizons/"
+    }
+]
