@@ -2482,3 +2482,27 @@ p {
         font-size: 0.9rem;
     }
 }
+
+/* ====================
+   ESTILOS PARA CONTENEDORES OCULTOS
+   ==================== */
+
+/* Ocultar contenedores de juegos por defecto */
+.api-games-container {
+    display: none;
+}
+
+/* Clase para mostrar contenedores */
+.api-games-container.visible {
+    display: block;
+}
+
+/* Clase helper para ocultar elementos */
+.hidden {
+    display: none !important;
+}
+
+/* Para mostrar elementos cuando sea necesario */
+.visible {
+    display: block !important;
+}

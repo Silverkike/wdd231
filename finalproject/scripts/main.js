@@ -804,11 +804,14 @@ function initEnginesPage() {
             if (!btn || !container) return;
 
             btn.addEventListener('click', () => {
-                const isVisible = container.style.display !== 'none';
-                container.style.display = isVisible ? 'none' : 'block';
-                btn.textContent = isVisible ?
-                    `🎮 Mostrar Juegos ${engine}` :
-                    `🎮 Ocultar Juegos ${engine}`;
+                const isVisible = container.classList.contains('visible');
+                if (isVisible) {
+                    container.classList.remove('visible');
+                    btn.textContent = `🎮 Show ${engine} Games`;
+                } else {
+                    container.classList.add('visible');
+                    btn.textContent = `🎮 Hide ${engine} Games`;
+                }
             });
         });
     }
