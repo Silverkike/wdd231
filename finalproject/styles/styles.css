@@ -389,6 +389,16 @@ p {
     opacity: 0.8;
 }
 
+.footer-social img {
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover img {
+    filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    transform: scale(1.1);
+}
+
 .footer-right {
     text-align: right;
     line-height: 1.6;
@@ -2439,5 +2449,36 @@ p {
 
     .api-game-image-container {
         height: 150px;
+    }
+}
+
+/* Video Link Styling */
+.video-demo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--neon-blue);
+    background: rgba(10, 185, 230, 0.1);
+    padding: 10px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.video-demo-link:hover {
+    background: rgba(10, 185, 230, 0.2);
+    color: var(--neon-red);
+    border-color: var(--neon-red);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 60, 40, 0.2);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .video-demo-link {
+        padding: 8px 12px;
+        font-size: 0.9rem;
     }
 }
